@@ -3,6 +3,7 @@
 *.bakk
 
 start_http_server
+git-publish.sh
 gitcmds.txt
 history.txt
 *.picasa*
