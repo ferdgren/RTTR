@@ -146,40 +146,42 @@ common areas. Runners can remove their masks for the race.</p>
     
 
     <br/>
-    <div>
+    <div class="media">
       <!--<img class="mr-3" src="/images/v2/celebrating.png" width="64" alt="Generic placeholder image">-->
-      <div>
+      <div class="media-body">
         <h5 class="mt-0">About The Race</h5>
         The Race Through The Redwoods is a 10K Race (and 1K Kids Race). We are in our 54th year of operation! 
-        The 2024 race took place on Sunday, August 18. <a href="/about.html">More Information</a>
+        The 2024 race will take place on Sunday, August 18. <a href="/about.html">More Information</a>
       </div>
-
-      <br>
+    <!--
+      <div class="media-body">
+        <h5 class="mt-0">RESULTS!</h5>
+        <iframe width="100%" height="600" frameborder="0" style="border: 1px solid #ddd;"
+                src="https://runsignup.com/Race/Results/38263/?embed&resultSetId-268351;perpage:30"></iframe>
+      </div>
+    -->
 
     </div>
-
     <br/>
-        <h5 class="mt-0">Registrations are CLOSED.  See you in 2025!</h5> <br><br>
-<!--
+        <h5 class="mt-0">Register HERE:</h5>
       <form class="form-inline my-2 my-lg-0">
         <a class="btn btn-primary" href="/register.html">Register</a>
       </form>
- -->
-    <h5 class="mt-0">2024 RACE RESULTS: </h5>
+    <br/>
+    <!--
     <div class="media">
-       <br><br>
+      <iframe width="100%" height="600" frameborder="0" style="border: 1px solid #ddd;"
+              src="https://runsignup.com/Race/CA/Felton/RaceThruTheRedwoods"></iframe>
+    </div>
+    -->
+    <!--
+    <div class="media">
        <a href="https://runsignup.com/Race/CA/Felton/RaceThruTheRedwoods" target="_blank">
-         <img width="70%" class="img-fluid" src="/images/RunSignup2024-FrontPage.jpg" />
-         <!-- <img class="img-fluid" src="/images/RunSignup2024-FrontPage.jpg" alt="click image to jump to RunSignup.com" /> -->
+       <a href="https://runsignup.com/Race/CA/Felton/RaceThruTheRedwoods" target="_blank">
+         <img class="img-fluid" src="/images/RunSignupFrontPage.jpg" alt="click image to jump to RunSignup.com" />
        </a>
     </div>
-    <br/>
-<!--
-      <div>
-        <iframe width="80%" height="200" frameborder="0" style="border: 1px solid #ddd;"
-                src="https://runsignup.com/Race/Results/38263/?embed&resultSetId-268351;perpage:30"></iframe>
-      </div>
- -->
+    -->
 
 
     <!--
@@ -214,11 +216,9 @@ common areas. Runners can remove their masks for the race.</p>
       <div class="media-body">
         <h5 class="mt-0">Contact</h5>
         For questions, hit us up on <a href="https://www.facebook.com/racethrutheredwoods/">Facebook</a><br/><br/>
-        <b>THANK YOU VOLUNTEERS !</b><br/>
-<!--
+        <b>VOLUNTEERS NEEDED!</b><br/>
         <p>If you can volunteer to help put on the race, please sign up on our Volunteers Form:<br/>
         <a href="https://forms.gle/V4DyqpC7CY96fX6n7" target="_blank">Volunteer Signup Form</a><br/>
--->
       </div>
     </div>
     <br />
