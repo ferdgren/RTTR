@@ -12,7 +12,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- <a class="navbar-brand" href="/index.html"><img src="/images/v2/newLogo2.png" style="height:60px;" /></a> -->
+    <!-- <a class="navbar-brand" href="/index.html"><img src="/images/2025Logo2.png" style="height:60px;" /></a> -->
     <a class="navbar-brand" href="/index.html">
       <img width="70%" class="img-fluid" src="/images/2025Logo.png" />
     </a>
@@ -43,12 +43,10 @@
         <li class="nav-item">
           <a class="nav-link" href="/contact.html#volunteers">Volunteers</a>
         </li>
-      </ul>
-<!--
       <form class="form-inline my-2 my-lg-0">
         <a class="btn btn-primary" href="/register.html">Register</a>
       </form>
--->
+      </ul>
 
     </div>
   </nav>
@@ -89,7 +87,7 @@ common areas. Runners can remove their masks for the race.</p>
       <div class="col-lg-6">
         <center>
         <!-- <img class="img-fluid" src="/images/v2/celebrating.png" /> -->
-        <img width="60%" class="img-fluid" src="/images/lo-res/Race_thru_redwoods_2025.jpg" />
+        <img width="80%" class="img-fluid" src="/images/RTTR25-poster-dark.png" />
         <!--img width="60%" class="img-fluid" src="/images/lo-res/RTTR24_poster_lores.png" / -->
 	<br><br>
         </center>
@@ -150,7 +148,7 @@ common areas. Runners can remove their masks for the race.</p>
       <!--<img class="mr-3" src="/images/v2/celebrating.png" width="64" alt="Generic placeholder image">-->
       <div>
         <h5 class="mt-0">About The Race</h5>
-        The Race Through The Redwoods is a 10K Race (and 1K Kids Race). We are in our 54th year of operation! 
+        The Race Through The Redwoods is a 10K Race (and 1K Kids Race). We are in our 55th year of operation! <br>
         The 2025 race will take place on Sunday, August 17. <a href="/about.html">More Information</a>
       </div>
 
@@ -159,28 +157,29 @@ common areas. Runners can remove their masks for the race.</p>
     </div>
 
     <br/>
-        <h5 class="mt-0">Registrations are CLOSED.  See you in 2025!</h5> <br><br>
+    <h5 class="mt-0">Registrations are CLOSED.  See you in 2026!</h5> <br><br>
 <!--
       <form class="form-inline my-2 my-lg-0">
         <a class="btn btn-primary" href="/register.html">Register</a>
       </form>
- -->
-    <h5 class="mt-0">2025 RACE RESULTS: </h5>
+-->
+    <h5 class="mt-0">2025 RACE RESULTS (click image): </h5>
+    <div>
+       <a href="https://my.raceresult.com/353458/" target="_blank">
+       <img width="70%" class="img-fluid" src="/images/RaceResults-2025-Banner.jpg" alt="Click to jump to results page" />
+       </a>
+    </div>
+    <br><br>
+
+    <h5 class="mt-0">2025 RUN SIGNUP PAGE: </h5>
     <div class="media">
        <br><br>
-       <a href="https://runsignup.com/Race/CA/Felton/RaceThruTheRedwoods" target="_blank">
+       <a href="https://runsignup.com/Race/Events/CA/Felton/RaceThruTheRedwoods" target="_blank">
          <img width="70%" class="img-fluid" src="/images/RunSignup2025-FrontPage.jpg" />
          <!-- <img class="img-fluid" src="/images/RunSignup2025-FrontPage.jpg" alt="click image to jump to RunSignup.com" /> -->
        </a>
     </div>
     <br/>
-<!--
-      <div>
-        <iframe width="80%" height="200" frameborder="0" style="border: 1px solid #ddd;"
-                src="https://runsignup.com/Race/Results/38263/?embed&resultSetId-268351;perpage:30"></iframe>
-      </div>
- -->
-
 
     <!--
     <div class="media">
