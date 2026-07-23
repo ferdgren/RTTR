@@ -56,3 +56,45 @@ iframe.map{
 div.main{
     padding: 12px;
 }
+
+.course-map {
+    width: 100%;
+    height: 250px;
+}
+
+@media (min-width: 480px) {
+    .course-map {
+        height: 350px;
+    }
+}
+
+@media (min-width: 768px) {
+    .course-map {
+        height: 400px;
+    }
+}
+
+@media (min-width: 992px) {
+    .course-map {
+        height: 450px;
+    }
+}
+
+.elevation-chart-wrap {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    margin-top: 12px;
+}
+
+@media (min-width: 480px) {
+    .elevation-chart-wrap {
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .elevation-chart-wrap {
+        height: 240px;
+    }
+}
