@@ -73,6 +73,20 @@
         var route = L.polyline(latlngs, { color: '#FC4C02', weight: 4 }).addTo(map);
         map.fitBounds(route.getBounds(), { padding: [20, 20] });
 
+        if (typeof L.polylineDecorator === 'function') {
+          L.polylineDecorator(route, {
+            patterns: [{
+              offset: '5%',
+              repeat: '10%',
+              symbol: L.Symbol.arrowHead({
+                pixelSize: 12,
+                polygon: false,
+                pathOptions: { stroke: true, color: '#ffffff', weight: 3, opacity: 0.9 }
+              })
+            }]
+          }).addTo(map);
+        }
+
         L.circleMarker(latlngs[0], { radius: 8, color: '#1a7a1a', fillColor: '#2ecc40', fillOpacity: 1, weight: 2 })
           .addTo(map)
           .bindPopup('Start');
@@ -80,6 +94,14 @@
         L.circleMarker(latlngs[latlngs.length - 1], { radius: 8, color: '#8c1414', fillColor: '#e0142c', fillOpacity: 1, weight: 2 })
           .addTo(map)
           .bindPopup('Finish');
+
+        var cursorMarker = L.circleMarker(latlngs[0], {
+          radius: 7,
+          color: '#1a56b0',
+          fillColor: '#3b82f6',
+          fillOpacity: 1,
+          weight: 2
+        });
 
         if (statsEl) {
           statsEl.textContent = 'Distance: ' + totalMiles.toFixed(2) + ' mi — Elevation gain: ' +
@@ -90,9 +112,11 @@
           var sampleEvery = Math.max(1, Math.floor(distancesMi.length / 300));
           var labels = [];
           var data = [];
+          var sampledLatLngs = [];
           for (var j = 0; j < distancesMi.length; j += sampleEvery) {
             labels.push(distancesMi[j].toFixed(2));
             data.push(Math.round(elevationsFt[j]));
+            sampledLatLngs.push(latlngs[j]);
           }
           new Chart(chartEl.getContext('2d'), {
             type: 'line',
@@ -112,12 +136,24 @@
             options: {
               responsive: true,
               maintainAspectRatio: false,
+              interaction: { mode: 'index', intersect: false },
               scales: {
                 x: { title: { display: true, text: 'Distance (mi)' } },
                 y: { title: { display: true, text: 'Elevation (ft)' } }
               },
-              plugins: { legend: { display: false } }
+              plugins: { legend: { display: false } },
+              onHover: function (event, activeElements) {
+                if (!activeElements || !activeElements.length) return;
+                var pos = sampledLatLngs[activeElements[0].index];
+                if (!pos) return;
+                if (!map.hasLayer(cursorMarker)) cursorMarker.addTo(map);
+                cursorMarker.setLatLng(pos);
+              }
             }
+          });
+
+          chartEl.addEventListener('mouseleave', function () {
+            if (map.hasLayer(cursorMarker)) map.removeLayer(cursorMarker);
           });
         }
       })
