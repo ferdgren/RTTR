@@ -87,6 +87,10 @@ div.main{
     margin-top: 12px;
 }
 
+.elevation-chart-wrap canvas {
+    cursor: crosshair;
+}
+
 @media (min-width: 480px) {
     .elevation-chart-wrap {
         height: 200px;
