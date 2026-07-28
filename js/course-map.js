@@ -1,5 +1,5 @@
 (function () {
-  var GPX_URL = '/gpx/RTTR-10k-course.gpx';
+  var GPX_URL = 'gpx/RTTR-10k-course.gpx';
   var METERS_TO_FEET = 3.28084;
 
   function haversineMiles(lat1, lon1, lat2, lon2) {
