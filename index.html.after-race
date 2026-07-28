@@ -1,0 +1,255 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Race Thru The Redwoods - Felton, CA</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <a class="navbar-brand" href="/index.html"><img src="/images/v2/newLogo2.png" style="height:60px;" /></a> -->
+    <a class="navbar-brand" href="/index.html">
+      <img width="70%" class="img-fluid" src="/images/2024Logo.png" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/course_info.html">Course Info</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/directions.html">Directions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sponsors.html">Sponsors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.html#volunteers">Volunteers</a>
+        </li>
+      </ul>
+<!--
+      <form class="form-inline my-2 my-lg-0">
+        <a class="btn btn-primary" href="/register.html">Register</a>
+      </form>
+-->
+
+    </div>
+  </nav>
+
+<!--
+  <center><a class="btn btn-primary" href="/register.html">Register</a></center><br><br>
+-->
+
+  <div class="container">
+
+    <!--
+    <div class="row">
+      <center>
+	<table width="100%" cellspacing="2">
+          <tr style="color:white; background-color: #CE2029; font-size:18pt;">
+           <td style="width: 80%;"</td>
+	     <center>
+<table width="60%" cellspacing="1"><tr><td>
+	     <center>
+              <p style="font-size:18pt">COVID-19 IMPORTANT INFORMATION:</p>
+	      <p style="font-size:10pt">
+We ask that everyone attending (regardless of your vaccination status), both runners and non-runners, follow the current
+effective guidance for COVID-19 protocols, from the Santa Cruz County Health Dept,
+and whatever the current guidance from Roaring Camp is in force at the time of the race.
+In addition, we ask that everyone wear a mask while gathering in the assembly and
+common areas. Runners can remove their masks for the race.</p>
+            </center>
+</td></tr></table>
+            </center>
+          </td></tr>
+        </table>
+      </center>
+    </div>
+    <br/>
+    -->
+
+    <div class="row">
+      <div class="col-lg-6">
+        <center>
+        <!-- <img class="img-fluid" src="/images/v2/celebrating.png" /> -->
+        <img width="60%" class="img-fluid" src="/images/lo-res/Race_thru_redwoods_2024.jpg" />
+        <!--img width="60%" class="img-fluid" src="/images/lo-res/RTTR24_poster_lores.png" / -->
+	<br><br>
+        </center>
+      </div>
+      <div class="col-lg-6">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+          <!--<ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>-->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="/images/v2/slideshow/start.jpg" alt="Race Start">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/v2/slideshow/runners1.jpg" alt="Runners On Course">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/v2/slideshow/runners2.jpg" alt="Runners On Course">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/v2/slideshow/runners3.jpg" alt="Runners On Course">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/v2/slideshow/sign.jpg" alt="Trail Sign">
+            </div>
+            <!-- <div class="carousel-item">
+              <img class="d-block w-100" src="/images/v2/slideshow/raffle.jpg" alt="Raffle">
+            </div>
+	    -->
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/v2/slideshow/food.jpg" alt="Food">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/v2/slideshow/water.jpg" alt="Water">
+            </div>
+            <!--<div class="carousel-item">
+              <img class="d-block w-100" src="/images/v2/slideshow/mark.jpg" alt="Race Organizer">
+            </div>-->
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    
+
+    <br/>
+    <div>
+      <!--<img class="mr-3" src="/images/v2/celebrating.png" width="64" alt="Generic placeholder image">-->
+      <div>
+        <h5 class="mt-0">About The Race</h5>
+        The Race Through The Redwoods is a 10K Race (and 1K Kids Race). We are in our 54th year of operation! 
+        The 2024 race took place on Sunday, August 18. <a href="/about.html">More Information</a>
+      </div>
+
+      <br>
+
+    </div>
+
+    <br/>
+        <h5 class="mt-0">Registrations are CLOSED.  See you in 2025!</h5> <br><br>
+<!--
+      <form class="form-inline my-2 my-lg-0">
+        <a class="btn btn-primary" href="/register.html">Register</a>
+      </form>
+ -->
+    <h5 class="mt-0">2024 RACE RESULTS: </h5>
+    <div class="media">
+       <br><br>
+       <a href="https://runsignup.com/Race/CA/Felton/RaceThruTheRedwoods" target="_blank">
+         <img width="70%" class="img-fluid" src="/images/RunSignup2024-FrontPage.jpg" />
+         <!-- <img class="img-fluid" src="/images/RunSignup2024-FrontPage.jpg" alt="click image to jump to RunSignup.com" /> -->
+       </a>
+    </div>
+    <br/>
+<!--
+      <div>
+        <iframe width="80%" height="200" frameborder="0" style="border: 1px solid #ddd;"
+                src="https://runsignup.com/Race/Results/38263/?embed&resultSetId-268351;perpage:30"></iframe>
+      </div>
+ -->
+
+
+    <!--
+    <div class="media">
+      <div class="media-body">
+        <h5 class="mt-0">Time</h5>
+        <b>Sunday, August 18</b><br/>
+        Kids Race: 8:10am<br />
+        10K Race: 8:30am
+      </div>
+    </div>
+    <br />
+    <div class="media">
+      <div class="media-body">
+        <h5 class="mt-0">Location</h5>
+        Parking, start and finish line are at Roaring Camp Railroads in Felton. 
+        The course runs through Henry Cowell State Park. <a href="/directions.html">Map</a>
+      </div>
+    </div>
+    <br />
+
+    <div class="media">
+      <div class="media-body">
+        <h5 class="mt-0">Packet Pickup</h5>
+        Packet pickup happens on-location on race day. Please allow extra time for this. You can pick up your packet as early as 7am. 
+      </div>
+    </div>
+    
+      -->
+    <br />
+    <div class="media">
+      <div class="media-body">
+        <h5 class="mt-0">Contact</h5>
+        For questions, hit us up on <a href="https://www.facebook.com/racethrutheredwoods/">Facebook</a><br/><br/>
+        <b>THANK YOU VOLUNTEERS !</b><br/>
+<!--
+        <p>If you can volunteer to help put on the race, please sign up on our Volunteers Form:<br/>
+        <a href="https://forms.gle/V4DyqpC7CY96fX6n7" target="_blank">Volunteer Signup Form</a><br/>
+-->
+      </div>
+    </div>
+    <br />
+
+    <!--
+    <div class="media">
+      <div class="media-body">
+        <h5 class="mt-0">Sign Up</h5>
+        Secure your spot today! <a class="btn btn-sm btn-primary" href="/register.html">Sign Up Now</a>
+      </div>
+    </div>
+    -->
+
+    <div style="height:100px;"></div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+  
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
