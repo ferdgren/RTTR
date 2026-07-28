@@ -1,0 +1,33 @@
+name: Deploy beta to GitHub Pages
+
+# Publishes the `beta` branch to `gh-pages` so the association can preview
+# in-progress site changes before they go live on production.
+#
+# This repo is a plain static HTML/CSS/JS site: no package.json, lockfile,
+# or build config exists anywhere in it, so there is no install/build step
+# to run. The repository root is deployed as-is.
+
+on:
+  push:
+    branches:
+      - beta
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-beta:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout beta
+        uses: actions/checkout@v4
+
+      - name: No build step (static site, no package.json found)
+        run: echo "No package.json/build tooling detected in this repo — deploying the repository root as-is."
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
