@@ -134,3 +134,58 @@ div.main{
         height: 240px;
     }
 }
+
+/* Sponsor logo cards: fixed height per tier so every logo in a tier
+   reads as the same size regardless of its own source image dimensions.
+   object-fit:contain scales each logo to fit without distorting or
+   overflowing its card. */
+.sponsor-tier {
+    margin-top: 28px;
+}
+
+.sponsor-tier h5 {
+    color: #d97000;
+}
+
+.sponsor-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    padding: 10px;
+    margin-bottom: 16px;
+    background-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+}
+
+.sponsor-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.sponsor-tier--partners .sponsor-card,
+.sponsor-tier--platinum .sponsor-card {
+    height: 150px;
+}
+
+.sponsor-tier--gold .sponsor-card {
+    height: 130px;
+}
+
+.sponsor-tier--silver .sponsor-card {
+    height: 115px;
+}
+
+.sponsor-tier--bronze .sponsor-card {
+    height: 105px;
+}
+
+.sponsor-tier--finish-line .sponsor-card {
+    height: 95px;
+}
+
+.sponsor-tier--kids .sponsor-card {
+    height: 85px;
+}
