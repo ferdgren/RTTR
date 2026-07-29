@@ -6,6 +6,30 @@
     height: 50px;
 }
 
+.site-footer {
+    margin-top: 48px;
+    background-color: #2b2f31;
+    color: #d0d0d0;
+}
+
+.site-footer h5 {
+    color: #ffffff;
+}
+
+.site-footer a {
+    color: #9ecbff;
+}
+
+.site-footer hr {
+    border-color: #454a4d;
+}
+
+@media (min-width: 992px) {
+    .footer-org-name {
+        white-space: nowrap;
+    }
+}
+
 div.footer{
     margin-top: 36px;
     border-top: 1px solid #184023;
