@@ -24,6 +24,12 @@
     border-color: #454a4d;
 }
 
+@media (min-width: 992px) {
+    .footer-org-name {
+        white-space: nowrap;
+    }
+}
+
 div.footer{
     margin-top: 36px;
     border-top: 1px solid #184023;
