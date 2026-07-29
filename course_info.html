@@ -1,90 +1,15 @@
-﻿<!doctype html> <html lang="en"> <head> <!-- Required meta tags --> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/core.css">
-
-  <!-- Leaflet -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" integrity="sha512-Zcn6bjR/8RZbLEpLIeOwNtzREBAJnUKESxces60Mpoj+2okopSAcSUIUOseddDm0cxnGQzxIR7vJgsLZbdLE3w==" crossorigin="anonymous">
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=race_day_info.html#course">
+  <link rel="canonical" href="https://www.racethrutheredwoods.com/race_day_info.html">
   <title>Race Thru The Redwoods - Felton, CA</title>
+  <script>
+    window.location.replace('race_day_info.html' + (window.location.hash || '#course'));
+  </script>
 </head>
 <body>
-  <header id="site-header" class="sticky-top" data-include="partials/header.html">
-  <noscript>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/2026Logo.png" class="navbar-logo" alt="Race Thru The Redwoods logo" />
-      </a>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="course_info.html">Course Info</a></li>
-        <li class="nav-item"><a class="nav-link" href="directions.html">Directions</a></li>
-        <li class="nav-item"><a class="nav-link" href="sponsors.html">Sponsors</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html#volunteers">Volunteers</a></li>
-      </ul>
-      <a class="btn btn-primary" href="register.html">Register</a>
-    </nav>
-  </noscript>
-  </header>
-  <script src="js/include-partials.js"></script>
-<a name="top"></a>
-  <div class="container">
-    <div class="row ">
-      <div class="col-xl-3 col-lg-3 col-md-3 d-none d-md-block" style="background-color:#BDBABD;">
-        <img src="images/v2/sidebars/IMG_1985-crop.jpg" class="sidebar" alt="Runners on the Race Thru The Redwoods trail course" loading="lazy" />
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
-        <div class="main">
-
-          <div class="alert alert-warning">
-            <b>Parking:</b> Event parking is at Roaring Camp Railroads (FREE of charge for racers), located at 5401 Graham Hill Road in Felton. 
-                <a href="https://goo.gl/maps/zG6cewu2ELdEB8WVA" target="_blank">map</a>
-          </div>
-          <h2>10k Race Map</h2>
-          The course Route and Elevation can be found on the
-          <a href="https://www.strava.com/routes/3257857005510265448" target="_blank">Strava Route Map</a>
-          <br/>
-          <a href="images/course/Strava-Adult-course-2025.jpg" target="_blank"><em>(click for printable version)</em></a>
-          <br/>
-          <br/>
-
-          <h4>Interactive Course Map</h4>
-          <div id="course-map" class="course-map"></div>
-          <p id="course-stats"><em>Loading course stats…</em></p>
-          <div class="elevation-chart-wrap">
-            <canvas id="elevation-chart"></canvas>
-          </div>
-
-          <br/>
-          <a name="kids"></a>
-          <h2>Kids 1-mile Race Map</h2>
-          <em>(click image for a printable version)</em>
-          <!-- <a href="images/course/Kids-course-2021-08-15.jpg" target="_blank"> -->
-          <a href="images/course/kids-course-2025.jpg" target="_blank">
-            <img class="img-fluid" src="images/course/kids-course-2025.jpg" alt="Kids 1-mile race route map, printable version" loading="lazy" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-  <!-- Interactive course map -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg==" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-polylinedecorator@1.6.0/dist/leaflet.polylineDecorator.js" integrity="sha384-FhPn/2P/fJGhQLeNWDn9B/2Gml2bPOrKJwFqJXgR3xOPYxWg5mYQ5XZdhUSugZT0" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js" integrity="sha512-Y51n9mtKTVBh3Jbx5pZSJNDDMyY+yGe77DGtBPzRlgsf/YLCh13kSZ3JmfHGzYFCmOndraf0sQgfM654b7dJ3w==" crossorigin="anonymous"></script>
-  <script src="js/course-map.js"></script>
+  <p>This page has moved. Redirecting to <a href="race_day_info.html">Race Day Info</a>.</p>
 </body>
 </html>
-
-
