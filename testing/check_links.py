@@ -11,6 +11,7 @@ Usage:
     python3 testing/check_links.py --base http://localhost:8000
 """
 import argparse
+import html
 import re
 import sys
 from pathlib import Path
@@ -40,7 +41,8 @@ def discover_pages():
 
 
 def extract_links(html_text):
-    return LINK_ATTR_RE.findall(HTML_COMMENT_RE.sub("", html_text))
+    raw = LINK_ATTR_RE.findall(HTML_COMMENT_RE.sub("", html_text))
+    return [html.unescape(link) for link in raw]
 
 
 def classify(link):
