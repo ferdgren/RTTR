@@ -192,3 +192,23 @@ div.main{
 .sponsor-tier--kids .sponsor-card {
     height: 85px;
 }
+
+/* Sponsorship level cards (accessible replacement for the old levels-chart image) */
+.sponsor-level-price {
+    font-weight: 700;
+    color: #d97000;
+    white-space: nowrap;
+}
+
+.sponsor-level-badge {
+    display: inline-block;
+    font-weight: 700;
+    color: #d97000;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.sponsor-level-card--featured {
+    border-color: #d97000;
+    background-color: #fff8f0;
+}
