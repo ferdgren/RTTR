@@ -1,10 +1,45 @@
-﻿div.footer{
-    margin-top: 36px;
-    border-top: 1px solid #184023;
-    background-color: #67A476;
-    color: #184023;
-    text-align: center;
-    font-size: larger;
+﻿#site-header {
+    min-height: 60px;
+}
+
+/* Bootstrap's .btn defaults to white-space:nowrap, so a long label on a
+   large button (e.g. "Click here to message us on Facebook") overflows
+   the viewport on phones instead of wrapping. Let large buttons wrap and
+   go full-width below the sm breakpoint. */
+@media (max-width: 575.98px) {
+    .btn-lg {
+        white-space: normal;
+        display: block;
+        width: 100%;
+    }
+}
+
+.navbar-logo {
+    height: 50px;
+}
+
+.site-footer {
+    margin-top: 48px;
+    background-color: #2b2f31;
+    color: #d0d0d0;
+}
+
+.site-footer h5 {
+    color: #ffffff;
+}
+
+.site-footer a {
+    color: #9ecbff;
+}
+
+.site-footer hr {
+    border-color: #454a4d;
+}
+
+@media (min-width: 992px) {
+    .footer-org-name {
+        white-space: nowrap;
+    }
 }
 
 img.sidebar{
@@ -55,4 +90,105 @@ iframe.map{
 
 div.main{
     padding: 12px;
+}
+
+.course-map {
+    width: 100%;
+    height: 250px;
+}
+
+@media (min-width: 480px) {
+    .course-map {
+        height: 350px;
+    }
+}
+
+@media (min-width: 768px) {
+    .course-map {
+        height: 400px;
+    }
+}
+
+@media (min-width: 992px) {
+    .course-map {
+        height: 450px;
+    }
+}
+
+.elevation-chart-wrap {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    margin-top: 12px;
+}
+
+.elevation-chart-wrap canvas {
+    cursor: crosshair;
+}
+
+@media (min-width: 480px) {
+    .elevation-chart-wrap {
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .elevation-chart-wrap {
+        height: 240px;
+    }
+}
+
+/* Sponsor logo cards: fixed height per tier so every logo in a tier
+   reads as the same size regardless of its own source image dimensions.
+   object-fit:contain scales each logo to fit without distorting or
+   overflowing its card. */
+.sponsor-tier {
+    margin-top: 28px;
+}
+
+.sponsor-tier h5 {
+    color: #d97000;
+}
+
+.sponsor-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    padding: 10px;
+    margin-bottom: 16px;
+    background-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+}
+
+.sponsor-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.sponsor-tier--partners .sponsor-card,
+.sponsor-tier--platinum .sponsor-card {
+    height: 150px;
+}
+
+.sponsor-tier--gold .sponsor-card {
+    height: 130px;
+}
+
+.sponsor-tier--silver .sponsor-card {
+    height: 115px;
+}
+
+.sponsor-tier--bronze .sponsor-card {
+    height: 105px;
+}
+
+.sponsor-tier--finish-line .sponsor-card {
+    height: 95px;
+}
+
+.sponsor-tier--kids .sponsor-card {
+    height: 85px;
 }
