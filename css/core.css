@@ -2,6 +2,18 @@
     min-height: 60px;
 }
 
+/* Bootstrap's .btn defaults to white-space:nowrap, so a long label on a
+   large button (e.g. "Click here to message us on Facebook") overflows
+   the viewport on phones instead of wrapping. Let large buttons wrap and
+   go full-width below the sm breakpoint. */
+@media (max-width: 575.98px) {
+    .btn-lg {
+        white-space: normal;
+        display: block;
+        width: 100%;
+    }
+}
+
 .navbar-logo {
     height: 50px;
 }
@@ -28,15 +40,6 @@
     .footer-org-name {
         white-space: nowrap;
     }
-}
-
-div.footer{
-    margin-top: 36px;
-    border-top: 1px solid #184023;
-    background-color: #67A476;
-    color: #184023;
-    text-align: center;
-    font-size: larger;
 }
 
 img.sidebar{
