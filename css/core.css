@@ -168,6 +168,32 @@ div.main{
     object-fit: contain;
 }
 
+/* Variant for sponsors whose logo alone doesn't identify the specific
+   local business (e.g. a national brand's local agent/franchisee) --
+   stacks the logo above a caption naming them, instead of just the logo. */
+.sponsor-card--captioned {
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 10px;
+}
+
+.sponsor-card--captioned img {
+    max-height: 50px;
+    margin-bottom: 8px;
+}
+
+.sponsor-card-caption {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    text-align: center;
+    color: #333333;
+}
+
+.sponsor-tier--bronze .sponsor-card--captioned {
+    height: auto;
+    min-height: 105px;
+}
+
 .sponsor-tier--partners .sponsor-card,
 .sponsor-tier--platinum .sponsor-card {
     height: 150px;
