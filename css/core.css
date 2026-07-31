@@ -193,7 +193,9 @@ div.main{
     height: 85px;
 }
 
-/* Sponsorship level cards (accessible replacement for the old levels-chart image) */
+/* Sponsorship level cards (accessible replacement for the old levels-chart image).
+   Each tier gets a color stripe across its header, echoing the color-coded
+   rows in the printed sponsorship form. */
 .sponsor-level-price {
     font-weight: 700;
     color: #d97000;
@@ -208,7 +210,17 @@ div.main{
     letter-spacing: 0.03em;
 }
 
-.sponsor-level-card--featured {
-    border-color: #d97000;
-    background-color: #fff8f0;
+.sponsor-level-card {
+    border-top: 5px solid var(--tier-color, #e2e2e2);
 }
+
+.sponsor-level-card .card-title > span:first-child {
+    color: var(--tier-color, inherit);
+}
+
+.sponsor-level-card--platinum { --tier-color: #7c8b99; }
+.sponsor-level-card--gold { --tier-color: #c9a227; }
+.sponsor-level-card--silver { --tier-color: #9aa0a6; }
+.sponsor-level-card--bronze { --tier-color: #cd7f32; background-color: #fff8f0; }
+.sponsor-level-card--finish-line { --tier-color: #b3261e; }
+.sponsor-level-card--kids { --tier-color: #3d8bbd; }
