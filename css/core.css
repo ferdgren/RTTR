@@ -168,6 +168,49 @@ div.main{
     object-fit: contain;
 }
 
+.sponsor-card:hover,
+.sponsor-card:focus {
+    text-decoration: none;
+}
+
+/* Variant for sponsors whose logo alone doesn't identify the specific
+   local business (e.g. a national brand's local agent/franchisee) --
+   the logo stays vertically centered exactly like a plain sponsor-card,
+   with a caption naming them added below that centered area. */
+.sponsor-card--captioned {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.sponsor-card-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+}
+
+.sponsor-card-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.sponsor-card-caption {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+.sponsor-tier--bronze .sponsor-card--captioned {
+    height: auto;
+    min-height: 105px;
+}
+
 .sponsor-tier--partners .sponsor-card,
 .sponsor-tier--platinum .sponsor-card {
     height: 150px;
@@ -181,16 +224,10 @@ div.main{
     height: 115px;
 }
 
-.sponsor-tier--bronze .sponsor-card {
-    height: 105px;
-}
-
-.sponsor-tier--finish-line .sponsor-card {
-    height: 95px;
-}
-
+.sponsor-tier--bronze .sponsor-card,
+.sponsor-tier--finish-line .sponsor-card,
 .sponsor-tier--kids .sponsor-card {
-    height: 85px;
+    height: 105px;
 }
 
 /* Sponsorship level cards (accessible replacement for the old levels-chart image).
