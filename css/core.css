@@ -224,16 +224,10 @@ div.main{
     height: 115px;
 }
 
-.sponsor-tier--bronze .sponsor-card {
-    height: 105px;
-}
-
-.sponsor-tier--finish-line .sponsor-card {
-    height: 95px;
-}
-
+.sponsor-tier--bronze .sponsor-card,
+.sponsor-tier--finish-line .sponsor-card,
 .sponsor-tier--kids .sponsor-card {
-    height: 85px;
+    height: 105px;
 }
 
 /* Sponsorship level cards (accessible replacement for the old levels-chart image).
