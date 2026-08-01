@@ -289,3 +289,69 @@ div.main{
 .sponsor-level-card--bronze { --tier-color: #8a5a34; }
 .sponsor-level-card--finish-line { --tier-color: #b3261e; }
 .sponsor-level-card--kids { --tier-color: #3d8bbd; }
+
+/* Homepage sponsor marquee: an auto-scrolling logo strip. The logo list is
+   duplicated in the HTML so the track can loop seamlessly (animate exactly
+   -50%, which lands on an identical copy of the start); the duplicate set
+   is aria-hidden + untabbable so screen readers and keyboard users only
+   encounter each sponsor once. */
+.sponsor-marquee-section {
+    margin: 40px 0;
+}
+
+.sponsor-marquee {
+    overflow: hidden;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+}
+
+.sponsor-marquee__track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: sponsor-marquee-scroll 35s linear infinite;
+}
+
+.sponsor-marquee:hover .sponsor-marquee__track {
+    animation-play-state: paused;
+}
+
+.sponsor-marquee__logo {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 160px;
+    margin: 0 16px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+}
+
+.sponsor-marquee__logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@keyframes sponsor-marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sponsor-marquee__track {
+        animation: none;
+    }
+
+    .sponsor-marquee {
+        overflow-x: auto;
+    }
+}
