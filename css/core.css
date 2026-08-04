@@ -392,7 +392,7 @@ div.main{
 }
 
 .piece-card:hover .piece-card-cta,
-.piece-card-cta:focus {
+.piece-card-cta:focus-visible {
     opacity: 1;
     color: #fbf3e1;
     text-decoration: none;
@@ -452,7 +452,7 @@ div.main{
 }
 
 .piece-hotspot-zone:hover .piece-hotspot,
-.piece-hotspot:focus {
+.piece-hotspot:focus-visible {
     opacity: 1;
     color: #fbf3e1;
     text-decoration: none;
