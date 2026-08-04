@@ -31,10 +31,13 @@ EXTERNAL_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; RTTR-link-checker/1.
 
 def discover_pages():
     pages = []
-    for f in REPO_ROOT.glob("*.html"):
+    for f in REPO_ROOT.rglob("*.html"):
+        rel = f.relative_to(REPO_ROOT)
+        if rel.parts[0].startswith(".") or rel.parts[0] == "partials":
+            continue
         if any(f.name.endswith(suf) for suf in SKIP_SUFFIXES):
             continue
-        pages.append(f.name)
+        pages.append(str(rel))
     for f in (REPO_ROOT / "partials").glob("*.html"):
         pages.append(f"partials/{f.name}")
     return sorted(pages)
