@@ -342,3 +342,20 @@ div.main{
     max-height: 100%;
     object-fit: contain;
 }
+
+/* "Adopt a Piece of the Race" item cards (sponsors/piece/) */
+.piece-card-price {
+    font-weight: 700;
+    color: #d97000;
+    white-space: nowrap;
+}
+
+.piece-card--claimed {
+    background-color: #faf8f5;
+}
+
+.piece-card-claimed-by {
+    margin-bottom: 0;
+    font-weight: 700;
+    color: #2f7d3c;
+}
