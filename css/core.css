@@ -359,3 +359,127 @@ div.main{
     font-weight: 700;
     color: #2f7d3c;
 }
+
+/* Hover/focus CTA overlay on each open item's HTML card, linking out to the
+   sponsorship form. Claimed cards don't get one -- nothing to sponsor. */
+.piece-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.piece-card-cta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    background-color: rgba(36, 53, 30, 0.92);
+    color: #fbf3e1;
+    font-weight: 700;
+    text-decoration: none;
+    opacity: 0;
+    /* Not just visually hidden -- not clickable either, until it's actually
+       visible. Without this, an invisible copy of the whole card would still
+       silently intercept every tap on touch devices (no real :hover there),
+       sending people to the sponsorship form with zero warning. */
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.piece-card:hover .piece-card-cta,
+.piece-card-cta:focus {
+    opacity: 1;
+    color: #fbf3e1;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+/* Same hover/focus CTA, positioned as hotspots directly on the poster image
+   itself, at each open item's card position. Coordinates are read off the
+   poster's own generated SVG (out/poster_web.svg in the poster-build kit --
+   each card is a fixed 200x200 box at a known x/y in the 2400x1800 canvas)
+   and expressed as percentages so they track the image at any responsive
+   width. The poster's card layout is fixed by that kit's own geometry
+   (make_poster.py), so these only need updating if that layout changes. */
+.piece-poster-wrap {
+    position: relative;
+    display: block;
+}
+
+.piece-poster-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* .piece-hotspot-zone is the actual hoverable region (always interactive --
+   it must stay that way, or it could never detect the mouse entering it in
+   the first place); .piece-hotspot is the CTA that fades in inside it. This
+   two-element split exists specifically so the CTA can be pointer-events:none
+   at rest (not clickable while invisible) without that also disabling the
+   hover detection that's supposed to reveal it -- pointer-events:none on an
+   element blocks it from receiving the hover that would un-hide itself. */
+.piece-hotspot-zone {
+    position: absolute;
+}
+
+.piece-hotspot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6%;
+    border-radius: 8%;
+    background-color: rgba(36, 53, 30, 0.92);
+    color: #fbf3e1;
+    font-weight: 700;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.piece-hotspot-zone:hover .piece-hotspot,
+.piece-hotspot:focus {
+    opacity: 1;
+    color: #fbf3e1;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.piece-hotspot-zone--2  { left: 26.250%; top: 21.111%; width: 8.333%; height: 11.111%; }
+.piece-hotspot-zone--3  { left: 50.000%; top: 19.111%; width: 8.333%; height: 11.111%; }
+.piece-hotspot-zone--4  { left: 73.750%; top: 20.889%; width: 8.333%; height: 11.111%; }
+.piece-hotspot-zone--5  { left: 90.000%; top: 19.444%; width: 8.333%; height: 11.111%; }
+.piece-hotspot-zone--6  { left: 89.583%; top: 57.778%; width: 8.333%; height: 11.111%; }
+.piece-hotspot-zone--7  { left: 87.917%; top: 74.444%; width: 8.333%; height: 11.111%; }
+.piece-hotspot-zone--8  { left: 67.292%; top: 75.444%; width: 8.333%; height: 11.111%; }
+.piece-hotspot-zone--10 { left: 34.792%; top: 75.667%; width: 8.333%; height: 11.111%; }
+.piece-hotspot-zone--11 { left: 18.542%; top: 74.111%; width: 8.333%; height: 11.111%; }
+.piece-hotspot-zone--12 { left: 2.292%;  top: 75.556%; width: 8.333%; height: 11.111%; }
+.piece-hotspot-zone--13 { left: 2.083%;  top: 55.556%; width: 8.333%; height: 11.111%; }
+.piece-hotspot-zone--14 { left: 2.083%;  top: 38.889%; width: 8.333%; height: 11.111%; }
+
+@media (hover: none) {
+    /* Devices with no hover-capable input at all (any touchscreen, any size
+       -- not just narrow phone widths, since e.g. an iPad in landscape is
+       just as hover-less). Twelve small hover-only targets aren't usable
+       there -- the poster becomes just an illustration, and the accessible
+       card list below (which the same CTA is duplicated onto) is the actual
+       way to act on it. */
+    .piece-hotspot-zone {
+        display: none;
+    }
+}
