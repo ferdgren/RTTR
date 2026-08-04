@@ -290,31 +290,37 @@ div.main{
 .sponsor-level-card--finish-line { --tier-color: #b3261e; }
 .sponsor-level-card--kids { --tier-color: #3d8bbd; }
 
-/* Homepage sponsor marquee: an auto-scrolling logo strip. The logo list is
-   duplicated in the HTML so the track can loop seamlessly (animate exactly
-   -50%, which lands on an identical copy of the start); the duplicate set
-   is aria-hidden + untabbable so screen readers and keyboard users only
-   encounter each sponsor once. */
+/* Homepage sponsor marquee: an auto-scrolling logo strip, driven by
+   js/sponsor-marquee.js rather than a CSS animation, so real touch/trackpad
+   scrolling works -- a visitor can swipe through it manually, and
+   auto-scroll pauses while they do, resuming after a short idle delay.
+   The logo list is duplicated in the HTML so the loop can be seamless
+   (the script resets scrollLeft by exactly one copy's width); the
+   duplicate set is aria-hidden + untabbable so screen readers and
+   keyboard users only encounter each sponsor once. */
 .sponsor-marquee-section {
-    margin: 40px 0;
+    margin: 40px 0 16px;
 }
 
 .sponsor-marquee {
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     width: 100%;
+    margin-bottom: 28px;
     -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
     mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sponsor-marquee::-webkit-scrollbar {
+    display: none;
 }
 
 .sponsor-marquee__track {
     display: flex;
     align-items: center;
     width: max-content;
-    animation: sponsor-marquee-scroll 35s linear infinite;
-}
-
-.sponsor-marquee:hover .sponsor-marquee__track {
-    animation-play-state: paused;
 }
 
 .sponsor-marquee__logo {
@@ -335,23 +341,4 @@ div.main{
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-}
-
-@keyframes sponsor-marquee-scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .sponsor-marquee__track {
-        animation: none;
-    }
-
-    .sponsor-marquee {
-        overflow-x: auto;
-    }
 }
