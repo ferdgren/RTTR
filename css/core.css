@@ -483,3 +483,9 @@ div.main{
         display: none;
     }
 }
+
+/* Callout on sponsors.html pointing to the Adopt-a-Piece page */
+.piece-page-callout {
+    background-color: #fff8f0;
+    border-color: #d97000;
+}
