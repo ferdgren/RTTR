@@ -26,10 +26,13 @@ SYSTEM_CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 def discover_pages():
     pages = []
-    for f in REPO_ROOT.glob("*.html"):
+    for f in REPO_ROOT.rglob("*.html"):
+        rel = f.relative_to(REPO_ROOT)
+        if rel.parts[0].startswith(".") or rel.parts[0] == "partials":
+            continue
         if any(f.name.endswith(suf) for suf in SKIP_SUFFIXES):
             continue
-        pages.append(f.name)
+        pages.append(str(rel))
     return sorted(pages)
 
 
