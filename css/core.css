@@ -489,3 +489,9 @@ div.main{
     background-color: #fff8f0;
     border-color: #d97000;
 }
+
+/* Marks buttons/links that leave the site (e.g. Register -> RunSignUp) */
+.external-link-icon {
+    margin-left: 5px;
+    vertical-align: -1px;
+}
