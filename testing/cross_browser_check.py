@@ -65,20 +65,31 @@ def main():
                     page.on("pageerror", lambda exc: console_errors.append(str(exc)))
 
                     try:
-                        page.goto(f"{args.base}/{page_name}", timeout=15000)
+                        target_url = f"{args.base}/{page_name}"
+                        page.goto(target_url, timeout=15000)
                         page.wait_for_timeout(700)
+
+                        # Redirect pages (meta refresh / JS redirect, e.g.
+                        # about.html/register.html) are bare by design -- no
+                        # header/nav, throwaway content never meant to be seen.
+                        # They redirect fast enough that the browser may have
+                        # already navigated away (even to an external site) by
+                        # the time we check, so detect via the final URL rather
+                        # than looking for the meta tag in the current DOM.
+                        is_redirect = page.url != target_url
 
                         overflow = page.evaluate("document.body.scrollWidth - window.innerWidth")
                         header_html = page.eval_on_selector("#site-header", "el => el ? el.innerHTML.length : -1") \
                             if page.query_selector("#site-header") else -1
 
                         problems = []
-                        if overflow and overflow > 2:
-                            problems.append(f"horizontal overflow {overflow}px")
-                        if header_html == 0:
-                            problems.append("shared header did not render (empty #site-header)")
-                        if header_html == -1 and page_name != "about.html":
-                            problems.append("no #site-header element found")
+                        if not is_redirect:
+                            if overflow and overflow > 2:
+                                problems.append(f"horizontal overflow {overflow}px")
+                            if header_html == 0:
+                                problems.append("shared header did not render (empty #site-header)")
+                            if header_html == -1:
+                                problems.append("no #site-header element found")
                         if console_errors:
                             problems.append(f"console errors: {console_errors[:3]}")
 
