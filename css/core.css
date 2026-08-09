@@ -211,8 +211,7 @@ div.main{
     min-height: 105px;
 }
 
-.sponsor-tier--partners .sponsor-card,
-.sponsor-tier--platinum .sponsor-card {
+.sponsor-tier--partners .sponsor-card {
     height: 150px;
 }
 
@@ -283,7 +282,6 @@ div.main{
     }
 }
 
-.sponsor-level-card--platinum { --tier-color: #7c8b99; }
 .sponsor-level-card--gold { --tier-color: #c9a227; }
 .sponsor-level-card--silver { --tier-color: #9aa0a6; }
 .sponsor-level-card--bronze { --tier-color: #8a5a34; }
@@ -460,10 +458,8 @@ div.main{
 }
 
 .piece-hotspot-zone--2  { left: 26.250%; top: 21.111%; width: 8.333%; height: 11.111%; }
-.piece-hotspot-zone--3  { left: 50.000%; top: 19.111%; width: 8.333%; height: 11.111%; }
 .piece-hotspot-zone--4  { left: 73.750%; top: 20.889%; width: 8.333%; height: 11.111%; }
 .piece-hotspot-zone--5  { left: 90.000%; top: 19.444%; width: 8.333%; height: 11.111%; }
-.piece-hotspot-zone--6  { left: 89.583%; top: 57.778%; width: 8.333%; height: 11.111%; }
 .piece-hotspot-zone--7  { left: 87.917%; top: 74.444%; width: 8.333%; height: 11.111%; }
 .piece-hotspot-zone--8  { left: 67.292%; top: 75.444%; width: 8.333%; height: 11.111%; }
 .piece-hotspot-zone--10 { left: 34.792%; top: 75.667%; width: 8.333%; height: 11.111%; }
