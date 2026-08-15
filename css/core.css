@@ -490,3 +490,106 @@ div.main{
     margin-left: 5px;
     vertical-align: -1px;
 }
+
+/* Homepage hero: full-width photo carousel with the event poster
+   overlaid as a small badge in the corner, instead of the poster and
+   carousel sitting in separate stacked columns. */
+.hero-carousel-wrap {
+    position: relative;
+}
+
+/* Dark scrim behind the poster badge's corner so it stays legible
+   against any of the rotating photos, not just the ones that happen
+   to be dark there. */
+.hero-carousel-wrap::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45%;
+    height: 65%;
+    max-width: 320px;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 75%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Source photos are ~5:4 (near-square); at full page width that renders
+   absurdly tall. Cap to a natural banner height per breakpoint and crop
+   with object-fit -- object-position is set per-slide inline in the
+   markup so each photo's faces stay in the visible band. */
+.hero-carousel-wrap .carousel-item img {
+    height: 260px;
+    object-fit: cover;
+}
+
+@media (min-width: 576px) {
+    .hero-carousel-wrap .carousel-item img {
+        height: 320px;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero-carousel-wrap .carousel-item img {
+        height: 420px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-carousel-wrap .carousel-item img {
+        height: 480px;
+    }
+}
+
+.hero-poster-badge {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    width: 20%;
+    max-width: 170px;
+    min-width: 84px;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.55));
+    pointer-events: none;
+    z-index: 2;
+}
+
+@media (max-width: 575.98px) {
+    .hero-poster-badge {
+        left: 10px;
+        bottom: 10px;
+        width: 26%;
+    }
+}
+
+/* Homepage "Race Day at a Glance" callout: same bold cream/orange
+   treatment as .piece-page-callout, applied directly (not riding on
+   Bootstrap's .card/.alert) since this isn't paired with those classes. */
+.race-day-callout {
+    background-color: #fff8f0;
+    border: 2px solid #d97000;
+    border-radius: 6px;
+    padding: 16px 24px;
+}
+
+.race-day-callout__title {
+    color: #d97000;
+    margin-bottom: 12px;
+}
+
+.race-day-callout__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.race-day-callout__item {
+    flex: 1 1 220px;
+}
+
+.race-day-callout__item h6 {
+    margin-bottom: 4px;
+}
+
+.race-day-callout__item p {
+    margin-bottom: 0;
+}
