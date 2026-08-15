@@ -490,3 +490,36 @@ div.main{
     margin-left: 5px;
     vertical-align: -1px;
 }
+
+/* Homepage "Race Day at a Glance" callout: same bold cream/orange
+   treatment as .piece-page-callout, applied directly (not riding on
+   Bootstrap's .card/.alert) since this isn't paired with those classes. */
+.race-day-callout {
+    background-color: #fff8f0;
+    border: 2px solid #d97000;
+    border-radius: 6px;
+    padding: 16px 24px;
+}
+
+.race-day-callout__title {
+    color: #d97000;
+    margin-bottom: 12px;
+}
+
+.race-day-callout__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.race-day-callout__item {
+    flex: 1 1 220px;
+}
+
+.race-day-callout__item h6 {
+    margin-bottom: 4px;
+}
+
+.race-day-callout__item p {
+    margin-bottom: 0;
+}
