@@ -491,6 +491,25 @@ div.main{
     vertical-align: -1px;
 }
 
+/* Slim full-width banner pointing at race results, sits right below the
+   sticky header. */
+.results-banner {
+    background-color: #d97000;
+    text-align: center;
+    padding: 10px 16px;
+    font-weight: 600;
+}
+
+.results-banner a {
+    color: #ffffff;
+}
+
+.results-banner a:hover,
+.results-banner a:focus {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 /* Homepage hero: full-width photo carousel with the event poster
    overlaid as a small badge in the corner, instead of the poster and
    carousel sitting in separate stacked columns. */
